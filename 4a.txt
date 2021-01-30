@@ -1,0 +1,10 @@
+SELECT NPSN,name_school,address,logo_school,school_level,status_school,user_id FROM school_tb
+
+
+SELECT NPSN,name_school,address,logo_school,school_level,status_school,user_id, user.name, user.email FROM school_tb 
+JOIN user 
+ON user.id=school_tb.user_id
+
+UPDATE `school_tb` SET `name_school` = 'SMAN 1 BANDAR LAMPUNG' WHERE `school_tb`.`id` = 2;
+
+SELECT * FROM `school_tb` WHERE `status_school`= 'Negri'
